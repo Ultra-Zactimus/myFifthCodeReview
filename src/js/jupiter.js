@@ -3,3 +3,6 @@ export default function Jupiter(name, age, lifeExpectancy) {
   this.age = age;
   this.lifeExpectancy = lifeExpectancy;
 }
+Jupiter.prototype.timeParadox = function () {
+
+};
