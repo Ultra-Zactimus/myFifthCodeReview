@@ -7,41 +7,29 @@ describe('Mercury', () => {
   });
 });
 
-describe('mercuryAge', () => {
+describe('whatYearIsIt', () => {
   test('should return users earth age in mercury years', () => {
     const mercury = new Mercury("Bob", "22", "64");
     let earthAge = parseInt(mercury.age);
-    let mercuryDays = (earthAge * 365);
-    let mercuryAgeOld = Math.floor(mercuryDays / 88).toString();
+    let inMercuryDays = (earthAge * 365);
+    let amIAncient = Math.floor(inMercuryDays / 88).toString();
     expect(earthAge).toEqual(22);
-    expect(mercuryDays).toEqual(8030);
-    expect(mercuryAgeOld).toEqual("91");
-    expect(mercury.mercuryAge()).toEqual(mercuryAgeOld);
+    expect(inMercuryDays).toEqual(8030);
+    expect(amIAncient).toEqual("91");
+    expect(mercury.whatYearIsIt()).toEqual(amIAncient);
   });
 });
-describe('mercuryLifeExpectancy', () => {
+describe('luckBeALady', () => {
   test('should return user life expectancy in mercury years', () => {
     const mercury = new Mercury("Bob", "22", "64");
-    let life = parseInt(mercury.lifeExpectancy);
-    let mercuryLife = (life * 365);
-    let mercuryExpect = Math.floor(mercuryLife / 88).toString();
-    const subNum = (expectMercury - expectEarth).toString();
-    expect(life).toEqual(64);
-    expect(mercuryLife).toEqual(23360);
-    expect(mercuryExpect).toEqual("265")
-    expect(mercury.mercuryLifeExpectancy()).toEqual(mercuryExpect);
+    let whenAngelsFly = parseInt(mercury.lifeExpectancy);
+    let inMercuryTime = (whenAngelsFly * 365);
+    let doesMercuryHateMe = Math.floor((inMercuryTime / 88));
+    const wouldIBeDead = (doesMercuryHateMe - whenAngelsFly).toString();
+    expect(whenAngelsFly).toEqual(64);
+    expect(inMercuryTime).toEqual(23360);
+    expect(doesMercuryHateMe).toEqual(265);
+    expect(wouldIBeDead).toEqual("201");
+    expect(mercury.luckBeALady()).toEqual(wouldIBeDead);
   });
-  describe('yearsUnderOrPast', () => {
-    test('should return the years under or over life expectancy', () => {
-      const mercury = new Mercury("Bob", "22", "64");
-      let life = parseInt(mercury.lifeExpectancy);
-      let mercuryLife = (life * 365);
-      let mercuryExpect = Math.floor(mercuryLife / 88);
-      const subNum = (mercuryExpect - mercuryLife).toString();
-      expect(mercuryLife).toEqual(64);
-      expect(mercuryExpect).toEqual(265);
-      expect(subnum).toEqual("201");
-      expect(mercury.yearsUnderOrPast()).toEqual(expectancy);
-    });
-  }); 
 });

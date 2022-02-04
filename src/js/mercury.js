@@ -4,20 +4,17 @@ export default function Mercury(name, age, lifeExpectancy) {
     this.lifeExpectancy = lifeExpectancy;
   }
 
-  Mercury.prototype.mercuryAge = function () {
+  Mercury.prototype.whatYearIsIt = function () {
     let earthAge = parseInt(this.age);
-    let mercuryDays = (earthAge * 365);
-    let mercuryAgeOld = Math.floor(mercuryDays / 88).toString();
-    return mercuryAgeOld;
+    let inMercuryDays = (earthAge * 365);
+    let amIAncient = Math.floor(inMercuryDays / 88).toString();
+    return amIAncient;
   };
 
-  Mercury.prototype.mercuryLifeExpectancy = function () {
-    let life = parseInt(this.lifeExpectancy);
-    let mercuryLife = (life * 365);
-    let mercuryExpect = Math.floor(mercuryLife / 88).toString();
-    return mercuryExpect;
-  };
-
-  Mercury.prototype.yearsUnderOrPast = function () {
-
+  Mercury.prototype.luckBeALady = function () {
+    let whenAngelsFly = parseInt(this.lifeExpectancy);
+    let inMercuryTime = (whenAngelsFly * 365);
+    let doesMercuryHateMe = Math.floor(inMercuryTime / 88);
+    const wouldIBeDead = (doesMercuryHateMe - whenAngelsFly).toString();
+    return wouldIBeDead;
   };
