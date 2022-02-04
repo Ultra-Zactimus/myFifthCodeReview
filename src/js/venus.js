@@ -5,5 +5,8 @@ export default function Venus (name, age, lifeExpectancy) {
 }
 
 Venus.prototype.timeWarp = function () {
-
+    let earthAge = parseInt(this.age);
+    let inVenusDays = (earthAge * 365);
+    let areWeThereYet = Math.floor(inVenusDays / 225).toString();
+    return areWeThereYet;
 };
