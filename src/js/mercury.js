@@ -15,6 +15,6 @@ export default function Mercury(name, age, lifeExpectancy) {
     let whenAngelsFly = parseInt(this.lifeExpectancy);
     let inMercuryTime = (whenAngelsFly * 365);
     let doesMercuryHateMe = Math.floor(inMercuryTime / 88);
-    const wouldIBeDead = (doesMercuryHateMe - whenAngelsFly).toString();
+    const wouldIBeDead = Math.abs((doesMercuryHateMe - whenAngelsFly)).toString();
     return wouldIBeDead;
   };

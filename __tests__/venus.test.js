@@ -24,7 +24,7 @@ describe('mercyMe', () => {
     let whatTheDocSaid = parseInt(venus.lifeExpectancy);
     let inVenusTime = (whatTheDocSaid * 365);
     let doesVenusHateMe = Math.floor(inVenusTime / 225);
-    const drumRoll = (doesVenusHateMe - whatTheDocSaid).toString();
+    const drumRoll = Math.abs((doesVenusHateMe - whatTheDocSaid)).toString();
     expect(whatTheDocSaid).toEqual(82);
     expect(inVenusTime).toEqual(29930);
     expect(doesVenusHateMe).toEqual(133);

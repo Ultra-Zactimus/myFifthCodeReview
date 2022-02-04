@@ -25,7 +25,7 @@ describe('luckBeALady', () => {
     let whenAngelsFly = parseInt(mercury.lifeExpectancy);
     let inMercuryTime = (whenAngelsFly * 365);
     let doesMercuryHateMe = Math.floor((inMercuryTime / 88));
-    const wouldIBeDead = (doesMercuryHateMe - whenAngelsFly).toString();
+    const wouldIBeDead = Math.abs((doesMercuryHateMe - whenAngelsFly)).toString();
     expect(whenAngelsFly).toEqual(64);
     expect(inMercuryTime).toEqual(23360);
     expect(doesMercuryHateMe).toEqual(265);
