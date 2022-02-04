@@ -3,3 +3,7 @@ export default function Venus (name, age, lifeExpectancy) {
     this.age = age;
     this.lifeExpectancy = lifeExpectancy;
 }
+
+Venus.prototype.timeWarp = function () {
+
+};
