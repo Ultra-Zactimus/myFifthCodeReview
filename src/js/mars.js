@@ -3,3 +3,6 @@ export default function Mars(name, age, lifeExpectancy) {
   this.age = age;
   this.lifeExpectancy = lifeExpectancy;
 }
+Mars.prototype.amIGettingYoungYet = function () {
+  
+};
