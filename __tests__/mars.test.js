@@ -24,7 +24,7 @@ describe('gimmeSomeGoodNews', () => {
     let rng = parseInt(mars.lifeExpectancy);
     let inVenusTime = (rng * 365);
     let doesMarsHateMe = Math.floor(inVenusTime / 687);
-    const theMagicMoment = (rng - doesMarsHateMe).toString();
+    const theMagicMoment = Math.abs((doesMarsHateMe - rng)).toString();
     expect(rng).toEqual(77);
     expect(inVenusTime).toEqual(28105);
     expect(doesMarsHateMe).toEqual(40);

@@ -12,5 +12,9 @@ Mars.prototype.amIGettingYoungYet = function () {
 };
 
 Mars.prototype.gimmeSomeGoodNews = function () {
-
+  let rng = parseInt(this.lifeExpectancy);
+  let inVenusTime = (rng * 365);
+  let doesMarsHateMe = Math.floor(inVenusTime / 687);
+  const theMagicMoment = Math.abs((doesMarsHateMe - rng)).toString();
+  return theMagicMoment;
 };
