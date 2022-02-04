@@ -8,9 +8,25 @@ describe('Mercury', () => {
 });
 
 describe('mercuryAge', () => {
-  test('should compare user age against mercury years and return their age in mercury years', () => {
+  test('should return users earth age in mercury years', () => {
     const mercury = new Mercury("Bob", "22", "64");
-    expect(mercury.mercuryAge()).toEqual("mercuryAgeOld");
-
+    let earthAge = parseInt(mercury.age);
+    let mercuryDays = (earthAge * 365);
+    let mercuryAgeOld = (mercuryDays / 88).toString();
+    expect(earthAge).toEqual(22);
+    expect(mercuryDays).toEqual(8030);
+    expect(mercuryAgeOld).toEqual("91.25");
+    expect(mercury.mercuryAge()).toEqual(mercuryAgeOld);
+  });
+});
+describe('mercuryLifeExpectancy', () => {
+  test('should return user life expectancy in mercury years', () => {
+    const mercury = new Mercury("Bob", "22", "64");
+    let life = parseInt(mercury.lifeExpectancy);
+    let mercuryLife = (life * 365);
+    let mercuryExpect = (mercuryLife / 88).toString();
+    expect(life).toEqual(23360);
+    expect(mercuryLife).toEqual("265.4545454545455");
+    expect(mercury.mercuryLifeExpectancy()).toEqual(mercuryExpect);
   });
 });
