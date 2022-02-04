@@ -12,5 +12,9 @@ Venus.prototype.timeWarp = function () {
 };
 
 Venus.prototype.mercyMe = function () {
-    
+    let whatTheDocSaid = parseInt(this.lifeExpectancy);
+    let inVenusTime = (whatTheDocSaid * 365);
+    let doesVenusHateMe = Math.floor(inVenusTime / 225);
+    const drumRoll = (doesVenusHateMe - whatTheDocSaid).toString();
+    return drumRoll;
 };
