@@ -25,9 +25,23 @@ describe('mercuryLifeExpectancy', () => {
     let life = parseInt(mercury.lifeExpectancy);
     let mercuryLife = (life * 365);
     let mercuryExpect = Math.floor(mercuryLife / 88).toString();
+    const subNum = (expectMercury - expectEarth).toString();
     expect(life).toEqual(64);
     expect(mercuryLife).toEqual(23360);
     expect(mercuryExpect).toEqual("265")
     expect(mercury.mercuryLifeExpectancy()).toEqual(mercuryExpect);
   });
+  describe('yearsUnderOrPast', () => {
+    test('should return the years under or over life expectancy', () => {
+      const mercury = new Mercury("Bob", "22", "64");
+      let life = parseInt(mercury.lifeExpectancy);
+      let mercuryLife = (life * 365);
+      let mercuryExpect = Math.floor(mercuryLife / 88);
+      const subNum = (mercuryExpect - mercuryLife).toString();
+      expect(mercuryLife).toEqual(64);
+      expect(mercuryExpect).toEqual(265);
+      expect(subnum).toEqual("201");
+      expect(mercury.yearsUnderOrPast()).toEqual(expectancy);
+    });
+  }); 
 });

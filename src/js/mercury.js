@@ -17,3 +17,7 @@ export default function Mercury(name, age, lifeExpectancy) {
     let mercuryExpect = Math.floor(mercuryLife / 88).toString();
     return mercuryExpect;
   };
+
+  Mercury.prototype.yearsUnderOrPast = function () {
+
+  };
