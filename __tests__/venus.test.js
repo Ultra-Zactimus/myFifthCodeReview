@@ -18,3 +18,16 @@ describe('timeWarp', () => {
     expect(venus.timeWarp()).toEqual(areWeThereYet);
   });
 });
+describe('mercyMe', () => {
+  test('should return life expectancy in Venus Years', () => {
+    const venus = new Venus("Suzy", "43", "82");
+    let whatTheDocSaid = parseInt(venus.lifeExpectancy);
+    let inVenusTime = (whatTheDocSaid * 365);
+    let doesVenusHateMe = Math.floor(inVenusTime / 225);
+    const drumRoll = (doesVenusHateMe - whatTheDocSaid).toString();
+    expect(whatTheDocSaid).toEqual(82);
+    expect(inVenusTime).toEqual(29930);
+    expect(doesVenusHateMe).toEqual(133);
+    expect(venus.mercyMe()).toEqual(drumRoll);
+  });
+});

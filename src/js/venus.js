@@ -10,3 +10,7 @@ Venus.prototype.timeWarp = function () {
     let areWeThereYet = Math.floor(inVenusDays / 225).toString();
     return areWeThereYet;
 };
+
+Venus.prototype.mercyMe = function () {
+    
+};
