@@ -1,7 +1,5 @@
-export default class Venus {
-  constructor(name, age, lifeExpectancy) {
+export default function Venus (name, age, lifeExpectancy) {
     this.name = name;
     this.age = age;
     this.lifeExpectancy = lifeExpectancy;
-  }
 }

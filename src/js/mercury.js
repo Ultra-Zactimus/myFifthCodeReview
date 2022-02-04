@@ -1,13 +1,12 @@
-export default class Mercury {
-  constructor(name, age, lifeExpectancy) {
+export default function Mercury(name, age, lifeExpectancy) {
     this.name = name;
     this.age = age;
     this.lifeExpectancy = lifeExpectancy;
   }
-  mercuryAge() {
-    let earthAge = parseInt(mercury.age);
-    let mercuryDays = (age * 365);
-    let mercuryAge = (multAge / 88);
-    return ["Hello " + mercury.name + " your age on mercury is " + mercuryAge];
-  }
-}
+
+  Mercury.prototype.mercuryAge = function () {
+    let earthAge = parseInt(this.age);
+    let mercuryDays = (earthAge * 365);
+    let mercuryAgeOld = (mercuryDays / 88);
+    return "mercuryAgeOld";
+  };
