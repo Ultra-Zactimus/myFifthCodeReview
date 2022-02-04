@@ -11,4 +11,9 @@ export default function Mercury(name, age, lifeExpectancy) {
     return mercuryAgeOld;
   };
 
-
+  Mercury.prototype.mercuryLifeExpectancy = function () {
+    let life = parseInt(this.lifeExpectancy);
+    let mercuryLife = (life * 365);
+    let mercuryExpect = (mercuryLife / 88).toString();
+    return mercuryExpect;
+  };

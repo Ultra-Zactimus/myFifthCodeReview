@@ -25,8 +25,8 @@ describe('mercuryLifeExpectancy', () => {
     let life = parseInt(mercury.lifeExpectancy);
     let mercuryLife = (life * 365);
     let mercuryExpect = (mercuryLife / 88).toString();
-    expect(life).toEqual(23360);
-    expect(mercuryLife).toEqual("265.4545454545455");
+    expect(life).toEqual(64);
+    expect(mercuryLife).toEqual(23360);
     expect(mercury.mercuryLifeExpectancy()).toEqual(mercuryExpect);
   });
 });
