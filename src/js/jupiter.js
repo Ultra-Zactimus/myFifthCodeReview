@@ -4,7 +4,7 @@ export default function Jupiter(name, age, lifeExpectancy) {
   this.lifeExpectancy = lifeExpectancy;
 }
 
-Jupiter.prototype.timeParadox = function () {
+Jupiter.prototype.timeParadox = function() {
   let earthAge = parseInt(this.age);
   let dyingToLive = parseInt(this.lifeExpectancy);
   let inJupiterDays = (earthAge * 365);

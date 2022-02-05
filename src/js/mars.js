@@ -4,7 +4,7 @@ export default function Mars(name, age, lifeExpectancy) {
   this.lifeExpectancy = lifeExpectancy;
 }
 
-Mars.prototype.amIGettingYoungYet = function () {
+Mars.prototype.amIGettingYoungYet = function() {
   let earthAge = parseInt(this.age);
   let rng = parseInt(this.lifeExpectancy);
   let inMarsDays = (earthAge * 365);
