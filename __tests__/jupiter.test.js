@@ -19,3 +19,18 @@ describe('timeParadox', () => {
     expect(jupiter.timeParadox()).toEqual(whatIsExistence);
   });
 });
+
+describe('timeAbhorsAParadox', () => {
+  test('should return life expectancy and in Jupiter Years', ()=> {
+    const jupiter = new Jupiter("Makoto", "66", "102");
+    let dyingToLive = parseInt(jupiter.lifeExpectancy);
+    let inJupiterTime = (dyingToLive * 365);
+    let doesJupiterHateMe = Math.floor(inJupiterTime / 4380);
+    const starChild = Math.abs((doesJupiterHateMe - dyingToLive)).toString();
+    expect(dyingToLive).toEqual(102);
+    expect(inJupiterTime).toEqual(37230);
+    expect(doesJupiterHateMe).toEqual(8);
+    expect(starChild).toEqual("94");
+    expect(jupiter.timeAbhorsAParadox()).toEqual(starChild);
+  });
+});
