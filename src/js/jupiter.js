@@ -12,5 +12,9 @@ Jupiter.prototype.timeParadox = function () {
 };
 
 Jupiter.prototype.timeAbhorsAParadox = function () {
-
+  let dyingToLive = parseInt(this.lifeExpectancy);
+  let inJupiterTime = (dyingToLive * 365);
+  let doesJupiterHateMe = Math.floor(inJupiterTime / 4380);
+  const starChild = Math.abs((doesJupiterHateMe - dyingToLive)).toString();
+  return starChild;
 };
