@@ -2,20 +2,17 @@ import Mars from './../src/js/mars.js';
 
 describe('Mars', () => {
   test('should create an object of venus with name, age and life expectancy', () => {
-    const mars = new Mars();
+    const mars = new Mars("Fatima", "35", "77");
     expect(mars).toEqual({
-      "name": undefined,
-      "age": undefined,
-      "lifeExpectancy": undefined
+      "name": "Fatima",
+      "age": "35",
+      "lifeExpectancy": "77"
     });
   });
 });
 describe('amIGettingYoungYet', () => {
   test('should give age and life expectancy in Mars Years', () => {
-    const mars = new Mars();
-    mars.name = "Fatima";
-    mars.age = "35";
-    mars.lifeExpectancy = "77";
+    const mars = new Mars("Fatima", "35", "77");
     let earthAge = parseInt(mars.age);
     let rng = parseInt(mars.lifeExpectancy);
     let inMarsDays = (earthAge * 365);

@@ -1,5 +1,5 @@
 export default class Jupiter {
-  contructor (name, age, lifeExpectancy) {
+  constructor (name, age, lifeExpectancy) {
     this.name = name;
     this.age = age;
     this.lifeExpectancy = lifeExpectancy;

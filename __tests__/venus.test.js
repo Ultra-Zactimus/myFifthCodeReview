@@ -2,20 +2,17 @@ import Venus from './../src/js/venus.js';
 
 describe('Venus', () => {
   test('it should create a venus object with name, age and life expectancy', () => {
-    const venus = new Venus();
+    const venus = new Venus("Suzy","43", "82");
     expect(venus).toEqual({
-      "name": undefined,
-      "age": undefined,
-      "lifeExpectancy": undefined
+      "name": "Suzy",
+      "age": "43",
+      "lifeExpectancy": "82"
     });
   });
 });
 describe('timeWarp', () => {
   test('should return age in Venus years', () => {
-    const venus = new Venus();
-    venus.name = "Suzy";
-    venus.age = "43";
-    venus.lifeExpectancy = "82";
+    const venus = new Venus("Suzy", "43", "82");
     let earthAge = parseInt(venus.age);
     let whatTheDocSaid = parseInt(venus.lifeExpectancy);
     let inVenusDays = (earthAge * 365);

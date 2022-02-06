@@ -2,17 +2,18 @@ import Jupiter from './../src/js/jupiter.js';
 
 describe('Jupiter', () => {
   test('should create an object with name, age and life expectancy', () => {
-    const jupiter = new Jupiter();
-    expect(jupiter).toEqual({"name": undefined, "age": undefined, "lifeExpectancy": undefined});
+    const jupiter = new Jupiter("Makoto", "66", "102");
+    expect(jupiter).toEqual({
+      "name": "Makoto", 
+      "age": "66", 
+      "lifeExpectancy": "102"
+    });
   });
 });
 
 describe('timeParadox', () => {
   test('should give age and life expectancy in Jupiter Years', () => {
-    const jupiter = new Jupiter();
-    jupiter.name = "Makoto";
-    jupiter.age = "66";
-    jupiter.lifeExpectancy = "102"
+    const jupiter = new Jupiter("Makoto", "66", "102");
     let earthAge = parseInt(jupiter.age);
     let dyingToLive = parseInt(jupiter.lifeExpectancy);
     let inJupiterDays = (earthAge * 365);
