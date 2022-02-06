@@ -2,18 +2,21 @@ import Mercury from './../src/js/mercury.js';
 
 describe('Mercury', () => {
   test('should create mercury object with name, age and life expectancy', () => {
-    const mercury = new Mercury("Bob", '22', "64");
+    const mercury = new Mercury();
     expect(mercury).toEqual({
-      "name": "Bob",
-      "age": "22",
-      "lifeExpectancy": "64"
+      "name": undefined,
+      "age": undefined,
+      "lifeExpectancy": undefined
     });
   });
 });
 
 describe('whatYearIsIt', () => {
   test('should give age and life expectancy in Mercury Years', () => {
-    const mercury = new Mercury("Bob", "22", "64");
+    const mercury = new Mercury();
+    mercury.name = "Bob";
+    mercury.age = "22";
+    mercury.lifeExpectancy = "64";
     let earthAge = parseInt(mercury.age);
     let whenAngelsFly = parseInt(mercury.lifeExpectancy);
     let inMercuryDays = (earthAge * 365);
@@ -28,6 +31,6 @@ describe('whatYearIsIt', () => {
     expect(inMercuryTime).toEqual(23360);
     expect(doesMercuryHateMe).toEqual(265);
     expect(wouldIBeDead).toEqual("201");
-    expect(mercury.whatYearIsIt()).toEqual("Your age would be " + amIAncient + "and your life expectancy would be " + wouldIBeDead);
+    expect(mercury.whatYearIsIt()).toEqual("Your age would be " + amIAncient + " and your life expectancy would be " + wouldIBeDead);
   });
 });

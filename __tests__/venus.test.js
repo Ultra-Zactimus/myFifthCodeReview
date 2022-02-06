@@ -2,17 +2,20 @@ import Venus from './../src/js/venus.js';
 
 describe('Venus', () => {
   test('it should create a venus object with name, age and life expectancy', () => {
-    const venus = new Venus("Suzy", "43", "82");
+    const venus = new Venus();
     expect(venus).toEqual({
-      "name": "Suzy",
-      "age": "43",
-      "lifeExpectancy": "82"
+      "name": undefined,
+      "age": undefined,
+      "lifeExpectancy": undefined
     });
   });
 });
 describe('timeWarp', () => {
   test('should return age in Venus years', () => {
-    const venus = new Venus("Suzy", "43", "82");
+    const venus = new Venus();
+    venus.name = "Suzy";
+    venus.age = "43";
+    venus.lifeExpectancy = "82";
     let earthAge = parseInt(venus.age);
     let whatTheDocSaid = parseInt(venus.lifeExpectancy);
     let inVenusDays = (earthAge * 365);
@@ -26,6 +29,6 @@ describe('timeWarp', () => {
     expect(whatTheDocSaid).toEqual(82);
     expect(inVenusTime).toEqual(29930);
     expect(doesVenusHateMe).toEqual(133);
-    expect(venus.timeWarp()).toEqual("Your age would be " + areWeThereYet + "and your life expectancy would be " + drumRoll);
+    expect(venus.timeWarp()).toEqual("Your age would be " + areWeThereYet + " and your life expectancy would be " + drumRoll);
   });
 });

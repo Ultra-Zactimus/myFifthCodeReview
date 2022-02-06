@@ -2,17 +2,20 @@ import Mars from './../src/js/mars.js';
 
 describe('Mars', () => {
   test('should create an object of venus with name, age and life expectancy', () => {
-    const mars = new Mars("Fatima", "35", "77");
+    const mars = new Mars();
     expect(mars).toEqual({
-      "name": "Fatima",
-      "age": "35",
-      "lifeExpectancy": "77"
+      "name": undefined,
+      "age": undefined,
+      "lifeExpectancy": undefined
     });
   });
 });
 describe('amIGettingYoungYet', () => {
   test('should give age and life expectancy in Mars Years', () => {
-    const mars = new Mars("Fatima", "35", "77");
+    const mars = new Mars();
+    mars.name = "Fatima";
+    mars.age = "35";
+    mars.lifeExpectancy = "77";
     let earthAge = parseInt(mars.age);
     let rng = parseInt(mars.lifeExpectancy);
     let inMarsDays = (earthAge * 365);
@@ -27,6 +30,6 @@ describe('amIGettingYoungYet', () => {
     expect(inVenusTime).toEqual(28105);
     expect(doesMarsHateMe).toEqual(40);
     expect(theMagicMoment).toEqual("37");
-    expect(mars.amIGettingYoungYet()).toEqual("Your age would be " + fountainOfYouth + "and your life expectancy would be " + theMagicMoment);
+    expect(mars.amIGettingYoungYet()).toEqual("Your age would be " + fountainOfYouth + " and your life expectancy would be " + theMagicMoment);
   });
 });
